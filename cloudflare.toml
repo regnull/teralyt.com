@@ -1,12 +1,12 @@
 [build]
 command = "npm run build"
-publish = "out"
+publish = ".next"
 
 [build.environment]
 NODE_VERSION = "18"
 
 [site]
-bucket = "out"
+bucket = ".next"
 
 [env.production]
 vars = { ENVIRONMENT = "production" }
