@@ -42,16 +42,32 @@ yarn dev
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-## Deployment
+## Deployment to Cloudflare Pages
 
-This website is configured for deployment on Cloudflare Pages. To deploy:
+1. Push your code to GitHub:
+```bash
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin <your-github-repo-url>
+git push -u origin main
+```
 
-1. Push your code to GitHub
-2. Connect your repository to Cloudflare Pages
-3. Configure the build settings:
+2. Go to [Cloudflare Dashboard](https://dash.cloudflare.com)
+
+3. Navigate to Pages > Create a project
+
+4. Connect to your GitHub repository
+
+5. Configure build settings:
+   - Framework preset: Next.js
    - Build command: `npm run build`
    - Build output directory: `.next`
    - Node.js version: 18.x
+
+6. Click "Save and Deploy"
+
+The site will be automatically deployed to a `*.pages.dev` domain. You can add a custom domain in the Cloudflare Pages settings.
 
 ## Project Structure
 

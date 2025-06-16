@@ -1,0 +1,18 @@
+[build]
+command = "npm run build"
+publish = ".next"
+
+[build.environment]
+NODE_VERSION = "18"
+
+[site]
+bucket = ".next"
+
+[env.production]
+vars = { ENVIRONMENT = "production" }
+
+[env.preview]
+vars = { ENVIRONMENT = "preview" }
+
+[env.development]
+vars = { ENVIRONMENT = "development" } 
